@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Endgame"
+author: "aimardcr"
+category: Mobile
+description: |
+    "We are in the endgame now"
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{soo_many_protections_and_you_still_managed_to_beat_it_what_a_31337}
+
+provide: ./dist
+
+hints:
+    - Patching the whole APK might broke the End-to-End encryption, i wonder why...Anyway, after breaking E2E the rest should be pentesting 101.
+    - Since the library is not stripped, it would just be easy to reverse it since the symbols are literally there. But notice how the encryption behavior changes when you repack the APK. I wonder if we can patch it dynamically.

@@ -1,0 +1,7 @@
+services:
+  englishorspanish:
+    build: .
+    ports:
+    - 52875:8000
+    entrypoint: /etc/init.sh
+    restart: always

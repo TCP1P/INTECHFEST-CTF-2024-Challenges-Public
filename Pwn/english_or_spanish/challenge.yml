@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "English or Spanish?"
+author: "rui"
+category: Pwn
+description: |
+    Yang nge-pwn duluan gay
+
+    **Connection**: `nc {{ .host }} 52875`
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd chall && docker compose up -d
+    stop: cd chall && docker compose down --volumes
+
+flags:
+    - INTECHFEST{only_available_in_glibc_2.35__vfprintf_internal_just_broke}
+
+provide: ./dist.zip

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Notes Manager"
+author: "aimardcr"
+category: Web
+description: |
+    You are a penetration tester and was hired by a small company who recently got their website compromised.
+    Your job is to find the critical vulnerability that caused the compromise.
+
+    **URL**: `http://{{ .host }}:3096`
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd notes-manager && docker compose up --build -d
+    stop: cd notes-manager && docker compose down --volumes
+
+flags:
+    - INTECHFEST{Gr4tz_N0w_Y0u_Ar3_A_P3nt3st3r}

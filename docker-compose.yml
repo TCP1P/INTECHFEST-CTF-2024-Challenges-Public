@@ -1,0 +1,37 @@
+version: "3.0"
+services:
+  gzctf:
+    image: gztime/gzctf:latest
+    restart: always
+    environment:
+      - "LC_ALL=en_US.UTF-8"
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - "./data/files:/app/files"
+      - "./appsettings.json:/app/appsettings.json:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    depends_on:
+      - db
+    networks:
+      - default
+      - challenges
+
+  gzctf-bot:
+    build: bot
+    restart: always
+    environment:
+      - "GZCTF_DISCORD_WEBHOOK=https://discord.com/api/webhooks/fake/fake"
+      - "POSTGRES_PASSWORD=fake"
+
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      - "POSTGRES_PASSWORD=fake"
+    volumes:
+      - "./data/db:/var/lib/postgresql/data"
+
+networks:
+  challenges:
+    external: true

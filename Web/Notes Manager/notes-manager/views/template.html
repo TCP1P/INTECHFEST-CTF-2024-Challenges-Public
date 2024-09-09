@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="{{ 'dark' if session['darkMode'] == 'true' else 'light' }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes Manager - {{title}}</title>
+
+	<!-- Google Font: Source Sans Pro -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Data Table -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <!-- ToastrJS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.css" integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/adminlte.min.css') }}">
+</head>
+<body class="hold-transition sidebar-mini {{ 'dark-mode' if session['darkMode'] == 'true' else '' }}">
+	<div class="wrapper">
+		<nav class="main-header navbar navbar-expand {{ 'navbar-dark' if session['darkMode'] == 'true' else 'navbar-light' }}">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+				</li>
+				<li class="nav-item d-none d-sm-inline-block">
+					<a href="/" class="nav-link">Home</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown">
+					<button class="nav-link dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" style="display: flex; align-items: center;">
+						<img src="https://picsum.photos/200" class="img-circle border border-primary border-4" alt="Profile Picture" style="width: 25px; height: 25px; min-width: 25px; min-height: 25px; border-width: 1.5px !important;">
+						<span class="pt-1 ps-1">
+							<i class="fas fa-angle-down"></i> <!-- Caret icon -->
+						</span>
+					</button>
+					<div class="dropdown-menu" style="margin-left: -119px;">
+						<span class="dropdown-item-text" style="color: var(--bs-body-color);">Hi, {{ g.user.username }}!</span>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/setting" view-name="Setting">Setting</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/logout" style="color: red;">Logout</a>
+					</div>
+				</li>
+			</ul>
+		
+		</nav>
+
+		<aside class="main-sidebar {{ 'sidebar-dark-primary' if session['darkMode'] == 'true' else 'sidebar-light-primary' }} elevation-4">
+			<a href="#" class="brand-link text-center">
+				<span class="brand-text font-weight-light">Notes<b>Manager</b></span>
+			</a>
+
+			<div class="sidebar">
+				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+					<div class="image">
+						<img src="https://picsum.photos/200" class="img-circle elevation-2" alt="Profile Picture" style="width: 35px; height: 35px; min-width: 35px; min-height: 35px;">
+					</div>
+					<div class="info">
+						<a href="#" class="d-block">
+							{{ g.user.username }}
+						</a>
+					</div>
+				</div>
+
+				<nav class="mt-2">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+						<li class="nav-header">MAIN MENU</li>
+						<li class="nav-item">
+							<a href="/" class="nav-link" view-name="Dashboard">
+								<i class="nav-icon fas fa-gauge"></i>
+								<p>
+									Dashboard
+								</p>
+							</a>
+						</li>
+
+						<li class="nav-header">NOTES</li>
+						<li class="nav-item">
+							<a href="/notes/create" class="nav-link" view-name="Create Note">
+								<i class="nav-icon fas fa-plus-circle"></i>
+								<p>
+									Create Note
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/notes" class="nav-link" view-name="Notes">
+								<i class="nav-icon fas fa-sticky-note"></i>
+								<p>
+									Notes
+								</p>
+							</a>
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+		</aside>
+
+		<div class="content-wrapper">
+			<div class="content-header">
+				<div class="container-fluid">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+              <h1 class="m-0 text-capitalize">{{title}}</h1>
+						</div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                {% block breadcrumb %}
+                {% endblock %}
+              </ol>
+            </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pl-4 pr-4">
+        {% block content %}
+        {% endblock %}
+			</div>
+		</div>
+
+		<footer class="main-footer">
+			<strong>Copyright &copy; 2023 <a href="#">Notes Manager</a>.</strong>
+			All rights reserved.
+		</footer>
+	</div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  <!-- Data Table -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <!-- ToastrJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- sweetalert2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.js" integrity="sha512-JbRQ4jMeFl9Iem8w6WYJDcWQYNCEHP/LpOA11LaqnbJgDV6Y8oNB9Fx5Ekc5O37SwhgnNJdmnasdwiEdvMjW2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap Switch -->
+  <script src="{{ url_for('static', filename='js/bootstrap-switch.min.js') }}"></script>
+  <!-- AdminLTE -->
+  <script src="{{ url_for('static', filename='js/adminlte.min.js') }}"></script>
+</body>
+
+<script id="main">
+	$(function() {
+		$("a[view-name='{{title}}']").addClass("active");
+		setTimeout(() => {
+			$("#main").remove();
+		}, 1000);
+	});
+</script>
+
+{% block script %}
+{% endblock %}
+
+{% if success %}
+<script id="success">
+	toastr.success("{{ success }}").then(() => {
+		$("#success").remove();
+	});
+</script>
+{% endif %}
+
+{% if error %}
+<script id="error">
+	toastr.error("{{ error }}").then(() => {
+		$("#error").remove();
+	});
+</script>
+{% endif %}
+</html>

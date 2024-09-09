@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Standard"
+author: "aimardcr"
+category: Reverse
+description: |
+    Don't even bother checking this challenge if you hate C++
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{The_C++_G0d_dea47fed}
+
+provide: ./dist

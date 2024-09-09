@@ -1,0 +1,7 @@
+services:
+  geraksendiri:
+    container_name: geraksendiri
+    build: .
+    ports:
+      - "6980:6980"
+    restart: always

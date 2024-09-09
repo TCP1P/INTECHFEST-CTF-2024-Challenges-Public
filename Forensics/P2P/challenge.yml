@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "P2P"
+author: "nagi"
+category: Forensic
+description: |
+    I hosted my code repository on a P2P network. What could possibly go wrong?
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{torR3nting_1s_not_4ctu4lLy_4_Crim3_7b14f98e9b}
+
+provide: ./dist
+
+hints:
+    - Due to the removal of torrent files on both seeder and peer's side, it is no longer possible to obtain the original file, even with online tracker. Instead, try to understand how data transmission works on uTorrent protocol, in order to fully recover the torrent files

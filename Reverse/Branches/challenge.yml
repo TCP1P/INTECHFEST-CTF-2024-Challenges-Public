@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Branches"
+author: "aimardcr"
+category: Reverse
+description: |
+    Decompilers won't help.
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{Br4nch3s_As_Fl4g_Ch3ck3r_Wh0_W0uld_Hav3_Th0ught}
+
+provide: ./dist

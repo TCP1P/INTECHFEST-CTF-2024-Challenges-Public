@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Serial"
+author: "aimardcr"
+category: Reverse
+description: |
+    `User:B74A-929C-666F-0FF5`
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{did_you_know_that_this_serial_system_was_the_same_serial_system_for_010_editor?}
+
+provide: ./dist

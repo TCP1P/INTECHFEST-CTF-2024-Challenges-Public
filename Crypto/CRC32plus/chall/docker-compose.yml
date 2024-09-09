@@ -1,0 +1,9 @@
+services:
+  crc32plus:
+    build: .
+    container_name: crc32plus
+    ports:
+      - 5301:5000
+    restart: always
+    environment:
+      - GZCTF_FLAG=INTECHFEST{m33t_in_the_m1ddle_is_b0ring__lets_meet_in_the_two_thirds}

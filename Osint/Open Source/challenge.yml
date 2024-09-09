@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Open Source"
+author: "aimardcr"
+category: OSINT
+description: |
+    I was making a reverse engineering challenge for this competition, it went succesfully and the chall ran perfectly fine.
+    But here's the plot twist, I was making the challenge in my phone. Now that my phone is dead forever, I lost the source for the challenge :(
+    Can you help me find the source code back? I created the challenge on an online C compiler website.
+    I don't remember the website name, but I do remember the company that made it. It was "Pawera Labs" or something.
+
+    `sha256(flag)==0f93700170772c1faf9a24433b83a7125e9cc0a678108b48dd8645ad594f579f`
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{siapa_sangka_bisa_rce_di_programiz}

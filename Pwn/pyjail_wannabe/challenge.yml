@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Pyjail Wannabe"
+author: "rui"
+category: Pwn
+description: |
+    capek main pyjailnya @nagi mulu tapi gak pernah solve? coba ini bang dijamin payloadnya gak sebrutal pyjail sebelah
+
+    **Connection**: `nc {{ .host }} 9007`
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd chall && docker compose up -d
+    stop: cd chall && docker compose down --volumes
+
+flags:
+    - INTECHFEST{what_kind_of_pyjail_it_this?_w31rd_b3h4v10ur_0f_pyth0n}
+
+provide: ./dist.zip
+
+hints:
+  - There's unnecessary error handling, you can use that by overwriting it and then it will called

@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Edward"
+author: "merricx"
+category: Crypto
+description: |
+    You've seen PoW with a hash function, but have you seen PoW with a digital signature?
+
+value: 1000
+type: DynamicContainer
+
+scripts:
+    start: cd chall && docker build -t edward .
+
+container:
+    containerImage: "edward:latest"
+    flagTemplate: INTECHFEST{https://imgur.com/a/HsPr3EU_[TEAM_HASH]}
+    memoryLimit: 512
+    cpuCount: 2
+    storageLimit: 512
+    containerExposePort: 5000
+    enableTrafficCapture: false
+
+
+provide: ./dist
+
+hints:
+    - Remember the curve has 8 cofactor. You don't need to delve into the ed25519 library code (unless you want to).
+    - In the past, the vulnerability also became a critical bug in Monero.

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Hijacker"
+author: "aimardcr"
+category: Mobile
+description: |
+    I heard 4-digits pin is insecure, so I made a 6-digits pin system with custom keyboard to prevent _keylogger_ for my android application.
+
+    You are required to create a malicious application to solve this challenge by stealing the user's PIN. Please submit your APK file to the [POC Tester](http://{{ .host }}:42586/) once you have created a working solution.
+
+    <div style="background:#595959;border-radius:1rem;padding:1rem"><b>❖ Note</b><br>
+    The POC Tester will first run your malicious application and then the vulnerable application to simulate user interaction in real life. Any permission in your malicious application will be automatically granted. Submit the correct PIN to the connection below to get the flag.</div>
+    </div>
+
+    Connection: `nc {{ .host }} 53655`
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{T4pj4ck1ng_In_Andr01d?!?!}
+
+provide: ./dist

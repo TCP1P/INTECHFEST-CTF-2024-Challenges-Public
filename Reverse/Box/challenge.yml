@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Box"
+author: "aimardcr"
+category: Reverse
+description: |
+    Box
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{Byp4ss1ng_Sh1tty_4nt1_Ch34t_S0_EZ}
+
+provide: Box

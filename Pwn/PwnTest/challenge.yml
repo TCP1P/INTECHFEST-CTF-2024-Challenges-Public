@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "PwnTest"
+author: "rui"
+category: Pwn
+description: |
+    This is pentest style challenge, you have to gain root on docker instead of qemu to get the flag.
+
+    **Connection**: `nc {{ .host }} 9006`
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd challenge && docker compose up -d
+    stop: cd challenge && docker compose down --volumes
+
+flags:
+    - INTECHFEST{i_have_no_idea_i_put_everything_on_that_machine_just_to_make_fullchain_pentest}
+
+provide: ./dist.tar.gz

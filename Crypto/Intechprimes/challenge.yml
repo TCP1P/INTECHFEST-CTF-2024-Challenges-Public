@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Intechprimes"
+author: "deomkicer"
+category: Crypto
+description: |
+    No tricks here. It's just some big % small numbers.
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{i_w0nder_how_s1mple_is_this_one_831b53}
+
+provide: ./dist

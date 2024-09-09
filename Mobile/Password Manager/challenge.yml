@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Password Manager"
+author: "aimardcr"
+category: Mobile
+description: |
+    It's a password manager, what could go wrong?
+
+    You are required to create a malicious application to get the flag. Please submit your APK file to the [POC Tester](http://{{ .host }}:42586/) once you have created a working solution.
+    The flag is located at the root "files" directory of the app (`/data/data/<package_name>/files/flag_<random_uuid>.txt`).
+
+    <div style="background:#595959;border-radius:1rem;padding:1rem"><b>❖ Note</b><br>
+    The POC Tester will first run your malicious application and then the vulnerable application. The POC tester will simulate user interaction that will trigger the exploit in your malicious application (if done correctly). Any permission that requires granting WILL NOT be allowed.</div>
+    </div>
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{Y4mL_Th1s_Y4Ml_Th4t_4nd_Y4mL_3v3rywh3r3}
+
+provide: ./dist
+
+hints:
+    - I wonder if the Content Provider can be used to write files...

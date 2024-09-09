@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "CRC32plus"
+author: "deomkicer"
+category: Crypto
+description: |
+    Pure crc32 is weak, that's why I tweaked it a little bit to make it more secure and then called it crc32plus.
+
+    Note: The timeout is changed to 90s
+
+value: 1000
+type: DynamicContainer
+
+scripts:
+    start: cd chall && docker build -t crc32plus .
+
+container:
+    flagTemplate: INTECHFEST{m33t_in_the_m1ddle_is_b0ring__lets_meet_in_the_two_thirds_[TEAM_HASH]}
+    containerImage: "crc32plus:latest"
+    memoryLimit: 512
+    cpuCount: 2
+    storageLimit: 512
+    containerExposePort: 5000
+    enableTrafficCapture: false
+
+provide: ./dist
+
+hints:
+    - This implementation (https://github.com/theonlypwner/crc32) might help, but you still need to tweak it for this challenge
+    - You need some luck to get the "good" poly. Once you get the "good" poly, you also need another luck and optimization for solving the collision and reversing the crc32plus in a very short time. On average, author's solution takes ~5 mins to bruteforce and finally be able to get the flag.

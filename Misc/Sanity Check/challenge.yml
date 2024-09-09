@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Sanity Check"
+author: "Ivy"
+category: Misc
+description: |
+    It does checks your sanity.
+
+    URL: http://ctf.intechfest.cc:8888/
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd sanity-check && docker compose up --build -d
+
+flags:
+    - INTECHFEST{W3lc0m3_And_G00dluck}

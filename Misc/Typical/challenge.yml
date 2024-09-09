@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Typical"
+author: "nagi"
+category: Misc
+description: |
+    Just your typical, yet mandatory pyjail
+
+    **Connection**: `nc {{ .host }} <port>`
+
+value: 1000
+type: DynamicContainer
+
+scripts:
+    start: cd chall && docker build -t typical .
+
+container:
+    containerImage: "typical:latest"
+    flagTemplate: INTECHFEST{tr4cing_b4ck_ov3r_python_3xception_e65ec4de12}
+    memoryLimit: 128
+    cpuCount: 2
+    storageLimit: 512
+    containerExposePort: 5000
+    enableTrafficCapture: true
+
+provide: ./dist
+
+hints:
+    - A method based on PEP introduced in Python 3.7 may be utilized to enable function calls without the use of parentheses

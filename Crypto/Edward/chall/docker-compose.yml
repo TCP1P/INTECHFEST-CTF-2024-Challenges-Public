@@ -1,0 +1,9 @@
+services:
+  edward:
+    build: .
+    container_name: edward
+    ports:
+      - 5302:5000
+    restart: always
+    environment:
+      - GZCTF_FLAG=INTECHFEST{https://imgur.com/a/HsPr3EU}

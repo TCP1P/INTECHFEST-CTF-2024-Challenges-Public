@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Library"
+author: "aimardcr"
+category: Web
+description: |
+    Sure sure, you are good at hacking server made using PHP, JavaScript, Python and Java.
+    Now try hack this C# server (>ω<)
+
+    Flag is located at `/flag_<random-uuid>.txt`
+
+    **URL**: `http://{{ .host }}:40279`
+
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd chall && docker compose up -d
+    stop: cd chall && docker compose down --volumes
+
+flags:
+    - INTECHFEST{L1nQ_Inj3cTshio0000nnnnn}
+
+provide: ./dist

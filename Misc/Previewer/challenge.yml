@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Previewer"
+author: "aimardcr"
+category: Misc
+description: |
+    Tired of keep compiling your Qt Form to preview it? Why don't you try this website I made!
+    It even runs your Qt code and takes screenshot of it! I'm sure it's secure!...right?
+
+    URL: http://{{ .host }}:32448/
+value: 1000
+type: StaticAttachment
+
+scripts:
+    start: cd previewer && docker compose up --build -d
+    stop: cd previewer && docker compose down --volumes
+
+flags:
+    - INTECHFEST{ini_awalnya_mau_dijadiin_cve_cuman_katanya_bukan_sekurity_issue_jadi_ywdah_deh}
+
+provide: ./dist

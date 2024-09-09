@@ -1,0 +1,314 @@
+{% extends "template.html" %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item active">Setting</li>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-primary">
+			<div class="card-header">
+				<h3 class="card-title">Account</h3>
+
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<div class="text-center">
+						<img class="profile-user-img img-circle" src="https://picsum.photos/200" alt="User profile picture" style="cursor: pointer; min-width: 100px; min-height: 100px;" onclick="document.getElementById('photo').click();">
+						<span class="text-center" style="position: absolute; top: 44.5%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; opacity: 0.0;">Choose</span>
+						<br>
+						<input type="file" style="display:none;" accept="image/*" id="photo" />
+						<button type="submit" class="btn btn-primary mt-4" id="upload-photo" disabled>Change Picture</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-white">
+			<div class="card-header">
+				<h3 class="card-title">Profile</h3>
+
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label for="name">Name: </label>
+					<input type="text" class="form-control" id="name" value="{{ g.user.name if g.user.name != None else '' }}">
+				</div>
+				<div class="form-group">
+					<label for="gender">Gender: </label>
+					<select class="form-select" id="gender">
+						<option></option>
+						{% for gender in ["male", "female", "attack_helicopter"] %}
+							{% if gender == g.user.gender %}
+							<option value="{{ gender }}" selected>{{ gender.title().replace('_', ' ') }}</option>
+							{% else %}
+							<option value="{{ gender }}">{{ gender.title().replace('_', ' ') }}</option>
+							{% endif %}
+						{% endfor %}
+					</select>
+				</div>
+				<div class="form-group">
+					<div class="d-flex justify-content-end align-items-right">
+						<button type="submit" class="btn btn-primary" id="update-profile">Update Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-secondary">
+			<div class="card-header">
+				<h3 class="card-title">Password</h3>
+
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label for="old">Current Password: </label>
+					<input type="password" class="form-control" id="old_pwd">
+				</div>
+				<div class="form-group">
+					<label for="new">New Password: </label>
+					<input type="password" class="form-control" id="new_pwd">
+				</div>
+				<div class="form-group">
+					<label for="confirm">Password Confirmation: </label>
+					<input type="password" class="form-control" id="conf_pwd">
+				</div>
+				<div class="form-group">
+					<div class="d-flex justify-content-end align-items-right">
+						<button type="submit" class="btn btn-primary" id="change-password">Change Password</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-success">
+			<div class="card-header">
+				<h3 class="card-title">Other</h3>
+
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<div class="form-group">
+						<label for="dark-mode">Dark Mode: </label> <br>
+						<input type="checkbox" id="dark-mode" data-bootstrap-switch>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+	$(function() {
+		$.ajax({
+			url: "/setting/dark-mode",
+			type: "GET",
+			dataType: "json",
+			
+			success: function (res) {
+				$("#dark-mode").bootstrapSwitch("state", res.state == "true" ? true : false);
+			},
+			complete: function() {
+				$("#dark-mode").on("switchChange.bootstrapSwitch", function (event, state) {
+					$.ajax({
+						url: "/setting/dark-mode",
+						type: "POST",
+						dataType: "json",
+						data: {
+							state: state
+						}
+					});
+					
+					if (state == true) {
+						$("body").addClass("dark-mode");
+			
+						$("aside.main-sidebar").removeClass("sidebar-light-primary");
+						$("aside.main-sidebar").addClass("sidebar-dark-primary");
+			
+						$("nav.navbar").removeClass("navbar-light");
+						$("nav.navbar").addClass("navbar-dark");
+					} else {
+						$("body").removeClass("dark-mode");
+			
+						$("aside.main-sidebar").removeClass("sidebar-dark-primary");
+						$("aside.main-sidebar").addClass("sidebar-light-primary");
+			
+						$("nav.navbar").removeClass("navbar-dark");
+						$("nav.navbar").addClass("navbar-light");
+					}
+				});	
+			}	
+		});
+  });
+
+	$("#update-profile").click(function () {
+		$.post({
+			url: "/setting/update-profile",
+			data: {
+				name: $("#name").val(),
+				gender: $("#gender").val(),
+			},
+			beforeSend: function () {
+				$("#update-profile").attr("disabled", "disabled");
+			},
+			complete: function (res) {
+				$("#update-profile").removeAttr("disabled");
+				toastr.success(res.responseJSON.message);
+			},
+		});
+	});
+
+	$("img.profile-user-img").hover(function () {
+		$("img.profile-user-img").stop(true, true);
+		$("span.text-center").stop(true, true);
+
+		$(function () {
+			$("img.profile-user-img").animate({
+				opacity: 0.25
+			}, 200);
+			$("span.text-center").animate({
+				opacity: 1.0
+			}, 200);
+		});
+	}, function () {
+		$(function () {
+			$("img.profile-user-img").animate({
+				opacity: 1.0
+			}, 200);
+			$("span.text-center").animate({
+				opacity: 0.0
+			}, 200);
+		});
+	});
+
+	$("input:file").change(function () {
+		var input = this;
+		var reader = new FileReader();
+		reader.readAsDataURL(input.files[0]);
+		reader.onloadend = function (event) {
+			$("img.profile-user-img").attr("src", event.target.result);
+		}
+
+		$("button.btn-primary").removeAttr("disabled");
+	});
+
+	$("#upload-photo").click(function () {
+		if ($("input:file")[0].files.length == 0) {
+			Swal.fire({
+				icon: "error",
+				title: "Gagal",
+				text: "Please choose a picture first!"
+			});
+			return;
+		}
+
+		const file = $("input:file")[0].files[0];
+		const formData = new FormData();
+		formData.append("file", file);
+
+		$.ajax({
+			url: "/setting/upload-picture",
+			type: "POST",
+			dataType: "json",
+			data: formData,
+			processData: false,
+			contentType: false,
+			beforeSend: function () {
+				$("button.btn-primary").attr("disabled", "disabled");
+			},
+			success: function (res) {
+				if (res.success) {
+					$("img[alt='Profile Picture']").attr("src", res.url);
+					toastr.success(res.message);
+				} else {
+					toastr.error(res.message);
+				}
+			},
+			error: function () {
+				toastr.error("Something wrong happened.");
+			},
+			complete: function () {
+				$("button.btn-primary").removeAttr("disabled");
+			}
+		});
+	});
+
+	$("#change-password").click(function (e) {
+		const old = $("#old_pwd");
+		const $new = $("#new_pwd");
+		const confirm = $("#conf_pwd");
+    
+    const inputs = [old, $new, confirm];
+    for (let i = inputs.length - 1; i >= 0; i--) {
+      if (inputs[i].val() == "") {
+        inputs[i].addClass("is-invalid").on("input", function () {
+          if ($(this).val() != "") {
+            $(this).removeClass("is-invalid");
+          }
+        }).focus();
+      }
+    }
+
+		if (old.val() == "" || $new.val() == "" || confirm.val() == "") {
+			return;
+		}
+
+		$.ajax({
+			url: "/setting/change-password",
+			type: "POST",
+			dataType: "json",
+			data: {
+				oldPassword: old.val(),
+				newPassword: $new.val(),
+				confirmPassword: confirm.val()
+			},
+			beforeSend: function () {
+				$("#change-password").attr("disabled", "disabled");
+			},
+			success: function (res) {
+				if (res.success) {
+					toastr.success(res.message);
+
+					$("#old_pwd").val("");
+					$("#new_pwd").val("");
+					$("#conf_pwd").val("");
+				} else {
+					toastr.error(res.message);
+				}
+			},
+			error: function () {
+				toastr.error("Something wrong happened.");
+			},
+			complete: function () {
+				$("#change-password").removeAttr("disabled");
+			}
+		});
+	});
+</script>
+{% endblock %}

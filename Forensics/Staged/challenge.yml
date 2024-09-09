@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Staged"
+author: "nagi"
+category: Forensic
+description: |
+    A malicious actor had staged a scheme to steal confidential information from our server. Unfortunately, we won't know the full extent of the loss until our incident response team completes its analysis.
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{dyn4mic_4nalys1s_with_4_cert4in_twist_huh_368bebc9bb}
+
+provide: ./dist

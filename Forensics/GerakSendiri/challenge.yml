@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "GerakSendiri"
+author: "53buahapel"
+category: Forensic
+description: |
+  Could you analyze this?
+
+value: 1000
+type: StaticContainer
+
+scripts:
+    start: cd chall && docker build -t gerak-sendiri .
+
+container:
+    containerImage: "gerak-sendiri:latest"
+    memoryLimit: 1024
+    cpuCount: 2
+    storageLimit: 1024
+    containerExposePort: 6980
+    enableTrafficCapture: false
+
+flags:
+  - INTECHFEST{bluetooth_could_be_dangerous_5dff7d}
+
+provide: ./dist

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Alin"
+author: "rui"
+category: Crypto
+description: |
+    Just implement one of my class subject.
+
+value: 1000
+type: StaticAttachment
+
+flags:
+    - INTECHFEST{y3t_4n0th3r_m4tr1x_ch4ll_bu7_wr1tt3n_1n_j4v4}
+
+provide: ./dist
