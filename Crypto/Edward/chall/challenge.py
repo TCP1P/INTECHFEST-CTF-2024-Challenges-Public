@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 import ed25519 # pip install ed25519
 
 try:
@@ -17,6 +17,6 @@ try:
 
         vk.verify(sig+suffix, prefix+msg)
 
-    print(os.getenv("GZCTF_FLAG", "INTECHFEST{redacted}"))
+    print(Path("flag.txt").read_text().strip())
 except Exception:
     exit(1)

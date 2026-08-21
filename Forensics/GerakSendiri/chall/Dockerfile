@@ -8,9 +8,11 @@ RUN     useradd ctf
 WORKDIR /home/ctf
 
 COPY main.py      /home/ctf/
+COPY start.sh     /usr/local/bin/start-challenge
 
 RUN chown -R root:root  /home/ctf
 RUN chmod -R 555        /home/ctf
+RUN chmod 0555 /usr/local/bin/start-challenge
 
 EXPOSE 6980
-ENTRYPOINT ["socat", "TCP-LISTEN:6980,reuseaddr,fork,nodelay,su=ctf", "EXEC:'python3 main.py'"]
+ENTRYPOINT ["/usr/local/bin/start-challenge"]

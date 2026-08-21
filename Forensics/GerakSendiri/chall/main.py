@@ -1,4 +1,5 @@
 import time
+from pathlib import Path
 
 def verify(index ,question, answer):
     while True:
@@ -14,14 +15,14 @@ def verify(index ,question, answer):
 
 def header():
     head = r"""
-  ______                  _                             _ _       _ 
+  ______                  _                             _ _       _
  / _____)                | |                           | (_)     (_)
-| /  ___  ____  ____ ____| |  _     ___  ____ ____   _ | |_  ____ _ 
+| /  ___  ____  ____ ____| |  _     ___  ____ ____   _ | |_  ____ _
 | | (___)/ _  )/ ___) _  | | / )   /___)/ _  )  _ \ / || | |/ ___) |
 | \____/( (/ /| |  ( ( | | |< (   |___ ( (/ /| | | ( (_| | | |   | |
  \_____/ \____)_|   \_||_|_| \_)  (___/ \____)_| |_|\____|_|_|   |_|
-                                                                                                                  
-                                                                                                      
+
+
 =======================================================================================================
 =======================================================================================================
     """
@@ -35,15 +36,15 @@ def challenge():
     print("""
 =======================================================================================================
                                             CHALLENGE
-=======================================================================================================    
+=======================================================================================================
 
     I just did an experiment, I challenge you to analyze what is actually happening.
-          
+
     \033[33mNote : All the answers are case sensitive\033[39m
 
 =======================================================================================================
 =======================================================================================================""")
-    
+
     verify(1, "What is the device that attacker use to attack victim device? ( answer in lowercase e.g. cpu)", "bluetooth")
     verify(2, "What is the victim bluetooth name? ( answer in lowercase e.g. ujang) ", "asep")
     verify(3, "What is the victim device MAC address ( e.g. 00:11:22:33:44:55 ) ", "10:82:d7:92:50:80")
@@ -60,7 +61,7 @@ def flag():
     while True:
         for i in range(0xf):
             try:
-                flag = "INTECHFEST{bluetooth_could_be_dangerous_5dff7d}"
+                flag = Path("/flag.txt").read_text().strip()
                 print(f'\033[32m[{i:x}]  Here is your flag : {flag} [{i:x}]', end='\r')
                 time.sleep(0.01)
             except KeyboardInterrupt:

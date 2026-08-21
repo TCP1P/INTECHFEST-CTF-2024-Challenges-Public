@@ -4,10 +4,10 @@ from Crypto.Util.number import long_to_bytes
 import random
 import signal
 import string
-import os
+from pathlib import Path
 
 CHARSET = string.digits + string.ascii_lowercase + "_"
-FLAG = os.getenv("GZCTF_FLAG", "INTECHFEST{redacted}")
+FLAG = Path("flag.txt").read_text().strip()
 
 
 class crc32plus:
