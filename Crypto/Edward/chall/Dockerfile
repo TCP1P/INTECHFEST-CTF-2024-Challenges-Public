@@ -9,4 +9,4 @@ WORKDIR /opt
 COPY challenge.py .
 
 
-CMD echo $GZCTF_FLAG > flag.txt && socat TCP-LISTEN:5000,fork,reuseaddr EXEC:'python3 challenge.py'
+CMD test -n "$GZCTF_FLAG" && printf '%s\n' "$GZCTF_FLAG" > flag.txt && unset GZCTF_FLAG && exec socat TCP-LISTEN:5000,fork,reuseaddr EXEC:'python3 challenge.py'

@@ -15,7 +15,7 @@ scripts:
 
 container:
     containerImage: "typical:latest"
-    flagTemplate: INTECHFEST{tr4cing_b4ck_ov3r_python_3xception_e65ec4de12}
+    flagTemplate: INTECHFEST{typical_457003ca_[TEAM_HASH]}
     memoryLimit: 128
     cpuCount: 2
     storageLimit: 512

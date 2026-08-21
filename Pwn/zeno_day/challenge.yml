@@ -13,7 +13,7 @@ scripts:
 
 container:
   containerImage: "zeno-day:latest"
-  flagTemplate: INTECHFEST{bypassing_proc_using_link_is_something_that_developer_often_missout}
+  flagTemplate: INTECHFEST{zeno_day_0b809028_[TEAM_HASH]}
   memoryLimit: 512
   cpuCount: 2
   storageLimit: 512
