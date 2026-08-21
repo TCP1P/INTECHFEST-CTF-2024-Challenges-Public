@@ -9,13 +9,16 @@ description: 'Just your typical, yet mandatory pyjail
   ---
 
   Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Typical).'
-type: StaticAttachment
+type: DynamicContainer
 category: Misc
 minScoreRate: 0.25
 difficulty: 5
 disableBloodBonus: false
 hints:
 - A method based on PEP introduced in Python 3.7 may be utilized to enable function calls without the use of parentheses
-flags:
-- INTECHFEST{tr4cing_b4ck_ov3r_python_3xception_e65ec4de12}
-provide: dist
+flagTemplate: INTECHFEST{typical_457003ca_[TEAM_HASH]}
+container:
+  memoryLimit: 128
+  cpuCount: 2
+  exposePort: 5000
+  enableTrafficCapture: true

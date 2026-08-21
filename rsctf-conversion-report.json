@@ -20,10 +20,9 @@
       "category": "Crypto",
       "source": "Crypto/CRC32plus/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/CRC32plus",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "flag recovered from the archived challenge tree",
-        "container package was not safely portable; imported as an archived attachment"
+        "flag recovered from the archived challenge tree"
       ],
       "manifest": "Jeopardy/Crypto/crc32plus/challenge.yaml"
     },
@@ -32,10 +31,9 @@
       "category": "Crypto",
       "source": "Crypto/Edward/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Edward",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "flag recovered from the archived challenge tree",
-        "container package was not safely portable; imported as an archived attachment"
+        "flag recovered from the archived challenge tree"
       ],
       "manifest": "Jeopardy/Crypto/edward/challenge.yaml"
     },
@@ -53,9 +51,9 @@
       "category": "Forensics",
       "source": "Forensics/GerakSendiri/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/GerakSendiri",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "container package was not safely portable; imported as an archived attachment"
+        "flag recovered from the archived challenge tree"
       ],
       "manifest": "Jeopardy/Forensics/geraksendiri/challenge.yaml"
     },
@@ -91,9 +89,9 @@
       "category": "Misc",
       "source": "Misc/CJ/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "container package was not safely portable; imported as an archived attachment"
+        "no literal flag could be recovered; organizer review required"
       ],
       "manifest": "Jeopardy/Misc/cj/challenge.yaml"
     },
@@ -102,9 +100,9 @@
       "category": "Misc",
       "source": "Misc/CJ Revenge/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ%20Revenge",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "container package was not safely portable; imported as an archived attachment"
+        "no literal flag could be recovered; organizer review required"
       ],
       "manifest": "Jeopardy/Misc/cj-revenge/challenge.yaml"
     },
@@ -133,10 +131,9 @@
       "category": "Misc",
       "source": "Misc/Typical/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Typical",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
       "warnings": [
-        "flag recovered from the archived challenge tree",
-        "container package was not safely portable; imported as an archived attachment"
+        "flag recovered from the archived challenge tree"
       ],
       "manifest": "Jeopardy/Misc/typical/challenge.yaml"
     },
@@ -230,10 +227,9 @@
       "category": "Pwn",
       "source": "Pwn/zeno_day/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/zeno_day",
-      "type": "StaticContainer",
+      "type": "DynamicContainer",
       "warnings": [
-        "flag recovered from the archived challenge tree",
-        "dynamic container lacked a supported flag template; converted to StaticContainer"
+        "no literal flag could be recovered; organizer review required"
       ],
       "manifest": "Jeopardy/Pwn/zeno-day/challenge.yaml"
     },

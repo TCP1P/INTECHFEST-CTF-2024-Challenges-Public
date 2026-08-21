@@ -1,0 +1,9 @@
+services:
+  edward:
+    build: .
+    container_name: edward
+    ports:
+      - 5302:5000
+    restart: always
+    environment:
+      - RSCTF_FLAG=fake{flag}

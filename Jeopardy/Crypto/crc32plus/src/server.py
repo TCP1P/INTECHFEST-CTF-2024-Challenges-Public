@@ -4,9 +4,10 @@ from Crypto.Util.number import long_to_bytes
 import random
 import signal
 import string
+from pathlib import Path
 
 CHARSET = string.digits + string.ascii_lowercase + "_"
-FLAG = open("flag.txt").read()
+FLAG = Path("flag.txt").read_text().strip()
 
 
 class crc32plus:
@@ -77,5 +78,5 @@ def main():
 
 
 if __name__ == "__main__":
-    signal.alarm(60)
+    signal.alarm(90)
     main()
