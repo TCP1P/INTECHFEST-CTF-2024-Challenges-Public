@@ -1,0 +1,18 @@
+name: P2P
+author: nagi
+description: 'I hosted my code repository on a P2P network. What could possibly go wrong?
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/P2P).'
+type: StaticAttachment
+category: Forensics
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- Due to the removal of torrent files on both seeder and peer's side, it is no longer possible to obtain the original file, even with online tracker. Instead, try to understand how data transmission works on uTorrent protocol, in order to fully recover the torrent files
+flags:
+- INTECHFEST{torR3nting_1s_not_4ctu4lLy_4_Crim3_7b14f98e9b}
+provide: dist

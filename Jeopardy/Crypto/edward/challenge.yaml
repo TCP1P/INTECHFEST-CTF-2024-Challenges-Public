@@ -1,0 +1,19 @@
+name: Edward
+author: merricx
+description: 'You''ve seen PoW with a hash function, but have you seen PoW with a digital signature?
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Edward).'
+type: StaticAttachment
+category: Crypto
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- Remember the curve has 8 cofactor. You don't need to delve into the ed25519 library code (unless you want to).
+- In the past, the vulnerability also became a critical bug in Monero.
+flags:
+- INTECHFEST{https://imgur.com/a/HsPr3EU}
+provide: dist

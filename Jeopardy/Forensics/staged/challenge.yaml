@@ -1,0 +1,16 @@
+name: Staged
+author: nagi
+description: 'A malicious actor had staged a scheme to steal confidential information from our server. Unfortunately, we won''t know the full extent of the loss until our incident response team completes its analysis.
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/Staged).'
+type: StaticAttachment
+category: Forensics
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{dyn4mic_4nalys1s_with_4_cert4in_twist_huh_368bebc9bb}
+provide: dist

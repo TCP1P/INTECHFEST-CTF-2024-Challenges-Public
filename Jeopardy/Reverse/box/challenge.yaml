@@ -1,0 +1,16 @@
+name: Box
+author: aimardcr
+description: 'Box
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Box).'
+type: StaticAttachment
+category: Reverse
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{Byp4ss1ng_Sh1tty_4nt1_Ch34t_S0_EZ}
+provide: dist

@@ -1,0 +1,21 @@
+name: Imposible
+author: Dimas
+description: 'It''s even possible to solve this challenge? I don''t think so.
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Imposible).'
+type: DynamicContainer
+category: Web
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- maybe what you're missing is the fact that golang using goroutine to handle requests
+flagTemplate: INTECHFEST{golang_race_condition_is_hard_to_find_[TEAM_HASH]}
+container:
+  memoryLimit: 1024
+  cpuCount: 2
+  exposePort: 8080
+  enableTrafficCapture: false

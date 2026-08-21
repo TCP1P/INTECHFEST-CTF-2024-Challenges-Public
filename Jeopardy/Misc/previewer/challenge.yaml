@@ -1,0 +1,21 @@
+name: Previewer
+author: aimardcr
+description: 'Tired of keep compiling your Qt Form to preview it? Why don''t you try this website I made!
+
+  It even runs your Qt code and takes screenshot of it! I''m sure it''s secure!...right?
+
+
+  URL: http://{{ .host }}:32448/
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Previewer).'
+type: StaticAttachment
+category: Misc
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{ini_awalnya_mau_dijadiin_cve_cuman_katanya_bukan_sekurity_issue_jadi_ywdah_deh}
+provide: dist

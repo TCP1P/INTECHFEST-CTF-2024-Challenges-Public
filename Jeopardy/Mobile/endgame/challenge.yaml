@@ -1,0 +1,19 @@
+name: Endgame
+author: aimardcr
+description: '"We are in the endgame now"
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Endgame).'
+type: StaticAttachment
+category: Mobile
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- Patching the whole APK might broke the End-to-End encryption, i wonder why...Anyway, after breaking E2E the rest should be pentesting 101.
+- Since the library is not stripped, it would just be easy to reverse it since the symbols are literally there. But notice how the encryption behavior changes when you repack the APK. I wonder if we can patch it dynamically.
+flags:
+- INTECHFEST{soo_many_protections_and_you_still_managed_to_beat_it_what_a_31337}
+provide: dist

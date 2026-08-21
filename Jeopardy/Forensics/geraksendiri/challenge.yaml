@@ -1,0 +1,16 @@
+name: GerakSendiri
+author: 53buahapel
+description: 'Could you analyze this?
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/GerakSendiri).'
+type: StaticAttachment
+category: Forensics
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{bluetooth_could_be_dangerous_5dff7d}
+provide: dist

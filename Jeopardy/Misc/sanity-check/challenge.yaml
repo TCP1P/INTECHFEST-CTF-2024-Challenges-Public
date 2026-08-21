@@ -1,0 +1,19 @@
+name: Sanity Check
+author: Ivy
+description: 'It does checks your sanity.
+
+
+  URL: http://ctf.intechfest.cc:8888/
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Sanity%20Check).'
+type: StaticAttachment
+category: Misc
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{W3lc0m3_And_G00dluck}
+provide: dist

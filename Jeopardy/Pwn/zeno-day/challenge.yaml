@@ -1,0 +1,23 @@
+name: Zeno Day
+author: Dimas
+description: 'is deno sandbox even secure? let''s find out!
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/zeno_day).'
+type: StaticContainer
+category: Pwn
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- rw only? what you can do with that? i think you need to bypass something too, think out of the box like if 0day is an options. nah it's actually 0day.
+flags:
+- INTECHFEST{bypassing_proc_using_link_is_something_that_developer_often_missout}
+container:
+  memoryLimit: 512
+  cpuCount: 2
+  exposePort: 8000
+  enableTrafficCapture: false
+  enableSharedContainer: false

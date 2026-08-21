@@ -1,0 +1,19 @@
+name: English or Spanish?
+author: rui
+description: 'Yang nge-pwn duluan gay
+
+
+  **Connection**: `nc {{ .host }} 52875`
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/english_or_spanish).'
+type: StaticAttachment
+category: Pwn
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{only_available_in_glibc_2.35__vfprintf_internal_just_broke}
+provide: dist

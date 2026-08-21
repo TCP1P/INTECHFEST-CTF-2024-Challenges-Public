@@ -1,0 +1,28 @@
+name: Hidden
+author: aimardcr
+description: 'Security 101: Never hardcode anything confidential in your code.
+
+
+  You are required to create a malicious application to get the flag. Please submit your APK file to the [POC Tester](http://{{ .host }}:42586/) once you have created a working solution.
+
+
+  <div style="background:#595959;border-radius:1rem;padding:1rem"><b>❖ Note</b><br>
+
+  The POC Tester will only run your malicious application.
+
+  </div>
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Hidden).'
+type: StaticAttachment
+category: Mobile
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- DexClassLoader might help you retrieve the secret.
+flags:
+- INTECHFEST{remember_kids_never_hardcode_a_secret_in_your_code}
+provide: dist

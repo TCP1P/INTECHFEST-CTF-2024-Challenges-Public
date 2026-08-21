@@ -1,0 +1,22 @@
+name: CRC32plus
+author: deomkicer
+description: 'Pure crc32 is weak, that''s why I tweaked it a little bit to make it more secure and then called it crc32plus.
+
+
+  Note: The timeout is changed to 90s
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/CRC32plus).'
+type: StaticAttachment
+category: Crypto
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+hints:
+- This implementation (https://github.com/theonlypwner/crc32) might help, but you still need to tweak it for this challenge
+- You need some luck to get the "good" poly. Once you get the "good" poly, you also need another luck and optimization for solving the collision and reversing the crc32plus in a very short time. On average, author's solution takes ~5 mins to bruteforce and finally be able to get the flag.
+flags:
+- INTECHFEST{m33t_in_the_m1ddle_is_b0ring__lets_meet_in_the_two_thirds}
+provide: dist

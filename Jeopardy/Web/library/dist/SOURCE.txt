@@ -1,0 +1,5 @@
+Library
+
+Original source: https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/The%20Library
+
+Local archive note: attachment archive exceeds RSCTF's per-file limit.

@@ -1,0 +1,5 @@
+Open Source
+
+Original source: https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Osint/Open%20Source
+
+Local archive note: no player attachment files were present.

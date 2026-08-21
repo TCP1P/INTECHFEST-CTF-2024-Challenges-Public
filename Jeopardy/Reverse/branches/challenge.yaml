@@ -1,0 +1,16 @@
+name: Branches
+author: aimardcr
+description: 'Decompilers won''t help.
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Branches).'
+type: StaticAttachment
+category: Reverse
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{Br4nch3s_As_Fl4g_Ch3ck3r_Wh0_W0uld_Hav3_Th0ught}
+provide: dist

@@ -1,0 +1,21 @@
+name: Notes Manager
+author: aimardcr
+description: 'You are a penetration tester and was hired by a small company who recently got their website compromised.
+
+  Your job is to find the critical vulnerability that caused the compromise.
+
+
+  **URL**: `http://{{ .host }}:3096`
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Notes%20Manager).'
+type: StaticAttachment
+category: Web
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{Gr4tz_N0w_Y0u_Ar3_A_P3nt3st3r}
+provide: dist

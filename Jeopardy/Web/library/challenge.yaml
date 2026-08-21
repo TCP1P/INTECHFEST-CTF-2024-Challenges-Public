@@ -1,0 +1,24 @@
+name: Library
+author: aimardcr
+description: 'Sure sure, you are good at hacking server made using PHP, JavaScript, Python and Java.
+
+  Now try hack this C# server (>ω<)
+
+
+  Flag is located at `/flag_<random-uuid>.txt`
+
+
+  **URL**: `http://{{ .host }}:40279`
+
+
+  ---
+
+  Historical archive converted for RSCTF practice. Original service endpoints may no longer be online. [Review the source challenge](https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/The%20Library).'
+type: StaticAttachment
+category: Web
+minScoreRate: 0.25
+difficulty: 5
+disableBloodBonus: false
+flags:
+- INTECHFEST{L1nQ_Inj3cTshio0000nnnnn}
+provide: dist

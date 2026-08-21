@@ -1,0 +1,321 @@
+{
+  "sourceRepository": "TCP1P/INTECHFEST-CTF-2024-Challenges-Public",
+  "targetRepository": "TCP1P/INTECHFEST-CTF-2024-Challenges-Public",
+  "private": false,
+  "events": [
+    "INTECHFEST CTF 2024"
+  ],
+  "challenges": [
+    {
+      "name": "Alin",
+      "category": "Crypto",
+      "source": "Crypto/Alin/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Alin",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Crypto/alin/challenge.yaml"
+    },
+    {
+      "name": "CRC32plus",
+      "category": "Crypto",
+      "source": "Crypto/CRC32plus/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/CRC32plus",
+      "type": "StaticAttachment",
+      "warnings": [
+        "flag recovered from the archived challenge tree",
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Crypto/crc32plus/challenge.yaml"
+    },
+    {
+      "name": "Edward",
+      "category": "Crypto",
+      "source": "Crypto/Edward/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Edward",
+      "type": "StaticAttachment",
+      "warnings": [
+        "flag recovered from the archived challenge tree",
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Crypto/edward/challenge.yaml"
+    },
+    {
+      "name": "Intechprimes",
+      "category": "Crypto",
+      "source": "Crypto/Intechprimes/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Intechprimes",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Crypto/intechprimes/challenge.yaml"
+    },
+    {
+      "name": "GerakSendiri",
+      "category": "Forensics",
+      "source": "Forensics/GerakSendiri/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/GerakSendiri",
+      "type": "StaticAttachment",
+      "warnings": [
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Forensics/geraksendiri/challenge.yaml"
+    },
+    {
+      "name": "Leaked",
+      "category": "Forensics",
+      "source": "Forensics/Leaked/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/Leaked",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Forensics/leaked/challenge.yaml"
+    },
+    {
+      "name": "P2P",
+      "category": "Forensics",
+      "source": "Forensics/P2P/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/P2P",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Forensics/p2p/challenge.yaml"
+    },
+    {
+      "name": "Staged",
+      "category": "Forensics",
+      "source": "Forensics/Staged/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/Staged",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Forensics/staged/challenge.yaml"
+    },
+    {
+      "name": "CJ",
+      "category": "Misc",
+      "source": "Misc/CJ/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ",
+      "type": "StaticAttachment",
+      "warnings": [
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Misc/cj/challenge.yaml"
+    },
+    {
+      "name": "CJ Revenge",
+      "category": "Misc",
+      "source": "Misc/CJ Revenge/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ%20Revenge",
+      "type": "StaticAttachment",
+      "warnings": [
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Misc/cj-revenge/challenge.yaml"
+    },
+    {
+      "name": "Previewer",
+      "category": "Misc",
+      "source": "Misc/Previewer/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Previewer",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Misc/previewer/challenge.yaml"
+    },
+    {
+      "name": "Sanity Check",
+      "category": "Misc",
+      "source": "Misc/Sanity Check/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Sanity%20Check",
+      "type": "StaticAttachment",
+      "warnings": [
+        "no player attachment files were present"
+      ],
+      "manifest": "Jeopardy/Misc/sanity-check/challenge.yaml"
+    },
+    {
+      "name": "Typical",
+      "category": "Misc",
+      "source": "Misc/Typical/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Typical",
+      "type": "StaticAttachment",
+      "warnings": [
+        "flag recovered from the archived challenge tree",
+        "container package was not safely portable; imported as an archived attachment"
+      ],
+      "manifest": "Jeopardy/Misc/typical/challenge.yaml"
+    },
+    {
+      "name": "Endgame",
+      "category": "Mobile",
+      "source": "Mobile/Endgame/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Endgame",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Mobile/endgame/challenge.yaml"
+    },
+    {
+      "name": "Hidden",
+      "category": "Mobile",
+      "source": "Mobile/Hidden/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Hidden",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Mobile/hidden/challenge.yaml"
+    },
+    {
+      "name": "Hijacker",
+      "category": "Mobile",
+      "source": "Mobile/Hijacker/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Hijacker",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Mobile/hijacker/challenge.yaml"
+    },
+    {
+      "name": "Password Manager",
+      "category": "Mobile",
+      "source": "Mobile/Password Manager/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Password%20Manager",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Mobile/password-manager/challenge.yaml"
+    },
+    {
+      "name": "Details",
+      "category": "OSINT",
+      "source": "Osint/Details/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Osint/Details",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/OSINT/details/challenge.yaml"
+    },
+    {
+      "name": "Open Source",
+      "category": "OSINT",
+      "source": "Osint/Open Source/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Osint/Open%20Source",
+      "type": "StaticAttachment",
+      "warnings": [
+        "no player attachment files were present"
+      ],
+      "manifest": "Jeopardy/OSINT/open-source/challenge.yaml"
+    },
+    {
+      "name": "PwnTest",
+      "category": "Pwn",
+      "source": "Pwn/PwnTest/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/PwnTest",
+      "type": "StaticAttachment",
+      "warnings": [
+        "attachment archive exceeds RSCTF's per-file limit"
+      ],
+      "manifest": "Jeopardy/Pwn/pwntest/challenge.yaml"
+    },
+    {
+      "name": "English or Spanish?",
+      "category": "Pwn",
+      "source": "Pwn/english_or_spanish/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/english_or_spanish",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Pwn/english-or-spanish/challenge.yaml"
+    },
+    {
+      "name": "Pyjail Wannabe",
+      "category": "Pwn",
+      "source": "Pwn/pyjail_wannabe/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/pyjail_wannabe",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Pwn/pyjail-wannabe/challenge.yaml"
+    },
+    {
+      "name": "Zeno Day",
+      "category": "Pwn",
+      "source": "Pwn/zeno_day/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/zeno_day",
+      "type": "StaticContainer",
+      "warnings": [
+        "flag recovered from the archived challenge tree",
+        "dynamic container lacked a supported flag template; converted to StaticContainer"
+      ],
+      "manifest": "Jeopardy/Pwn/zeno-day/challenge.yaml"
+    },
+    {
+      "name": "Box",
+      "category": "Reverse",
+      "source": "Reverse/Box/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Box",
+      "type": "StaticAttachment",
+      "warnings": [
+        "attachment omitted to stay below the repository size limit"
+      ],
+      "manifest": "Jeopardy/Reverse/box/challenge.yaml"
+    },
+    {
+      "name": "Branches",
+      "category": "Reverse",
+      "source": "Reverse/Branches/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Branches",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Reverse/branches/challenge.yaml"
+    },
+    {
+      "name": "Serial",
+      "category": "Reverse",
+      "source": "Reverse/Serial/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Serial",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Reverse/serial/challenge.yaml"
+    },
+    {
+      "name": "Standard",
+      "category": "Reverse",
+      "source": "Reverse/Standard/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Standard",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Reverse/standard/challenge.yaml"
+    },
+    {
+      "name": "Client Side Programming",
+      "category": "Web",
+      "source": "Web/Client Side Programming/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Client%20Side%20Programming",
+      "type": "StaticAttachment",
+      "warnings": [],
+      "manifest": "Jeopardy/Web/client-side-programming/challenge.yaml"
+    },
+    {
+      "name": "Imposible",
+      "category": "Web",
+      "source": "Web/Imposible/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Imposible",
+      "type": "DynamicContainer",
+      "warnings": [
+        "no literal flag could be recovered; organizer review required"
+      ],
+      "manifest": "Jeopardy/Web/imposible/challenge.yaml"
+    },
+    {
+      "name": "Notes Manager",
+      "category": "Web",
+      "source": "Web/Notes Manager/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Notes%20Manager",
+      "type": "StaticAttachment",
+      "warnings": [
+        "no player attachment files were present"
+      ],
+      "manifest": "Jeopardy/Web/notes-manager/challenge.yaml"
+    },
+    {
+      "name": "Library",
+      "category": "Web",
+      "source": "Web/The Library/challenge.yml",
+      "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/The%20Library",
+      "type": "StaticAttachment",
+      "warnings": [
+        "attachment archive exceeds RSCTF's per-file limit"
+      ],
+      "manifest": "Jeopardy/Web/library/challenge.yaml"
+    }
+  ]
+}
