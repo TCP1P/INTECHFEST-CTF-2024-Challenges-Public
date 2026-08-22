@@ -12,6 +12,7 @@
       "source": "Crypto/Alin/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Alin",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Crypto/alin/challenge.yaml"
     },
@@ -21,6 +22,7 @@
       "source": "Crypto/CRC32plus/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/CRC32plus",
       "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
         "flag recovered from the archived challenge tree"
       ],
@@ -32,6 +34,7 @@
       "source": "Crypto/Edward/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Edward",
       "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
         "flag recovered from the archived challenge tree"
       ],
@@ -43,6 +46,7 @@
       "source": "Crypto/Intechprimes/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Crypto/Intechprimes",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Crypto/intechprimes/challenge.yaml"
     },
@@ -52,6 +56,7 @@
       "source": "Forensics/GerakSendiri/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/GerakSendiri",
       "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
         "flag recovered from the archived challenge tree"
       ],
@@ -63,6 +68,7 @@
       "source": "Forensics/Leaked/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/Leaked",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Forensics/leaked/challenge.yaml"
     },
@@ -72,6 +78,7 @@
       "source": "Forensics/P2P/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/P2P",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Forensics/p2p/challenge.yaml"
     },
@@ -81,6 +88,7 @@
       "source": "Forensics/Staged/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Forensics/Staged",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Forensics/staged/challenge.yaml"
     },
@@ -90,9 +98,8 @@
       "source": "Misc/CJ/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ",
       "type": "DynamicContainer",
-      "warnings": [
-        "no literal flag could be recovered; organizer review required"
-      ],
+      "runtimeReason": null,
+      "warnings": [],
       "manifest": "Jeopardy/Misc/cj-rsctf-dynamic/challenge.yaml"
     },
     {
@@ -101,9 +108,8 @@
       "source": "Misc/CJ Revenge/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/CJ%20Revenge",
       "type": "DynamicContainer",
-      "warnings": [
-        "no literal flag could be recovered; organizer review required"
-      ],
+      "runtimeReason": null,
+      "warnings": [],
       "manifest": "Jeopardy/Misc/cj-revenge-rsctf-dynamic/challenge.yaml"
     },
     {
@@ -112,6 +118,7 @@
       "source": "Misc/Previewer/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Previewer",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Misc/previewer/challenge.yaml"
     },
@@ -121,6 +128,7 @@
       "source": "Misc/Sanity Check/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Sanity%20Check",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [
         "no player attachment files were present"
       ],
@@ -132,6 +140,7 @@
       "source": "Misc/Typical/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Typical",
       "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
         "flag recovered from the archived challenge tree"
       ],
@@ -143,6 +152,7 @@
       "source": "Mobile/Endgame/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Endgame",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Mobile/endgame/challenge.yaml"
     },
@@ -152,6 +162,7 @@
       "source": "Mobile/Hidden/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Hidden",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Mobile/hidden/challenge.yaml"
     },
@@ -161,6 +172,7 @@
       "source": "Mobile/Hijacker/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Hijacker",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Mobile/hijacker/challenge.yaml"
     },
@@ -170,6 +182,7 @@
       "source": "Mobile/Password Manager/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Mobile/Password%20Manager",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Mobile/password-manager/challenge.yaml"
     },
@@ -179,7 +192,10 @@
       "source": "Osint/Details/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Osint/Details",
       "type": "StaticAttachment",
-      "warnings": [],
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
+      "warnings": [
+        "attachment omitted to stay below the repository size limit"
+      ],
       "manifest": "Jeopardy/OSINT/details/challenge.yaml"
     },
     {
@@ -188,6 +204,7 @@
       "source": "Osint/Open Source/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Osint/Open%20Source",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [
         "no player attachment files were present"
       ],
@@ -198,29 +215,45 @@
       "category": "Pwn",
       "source": "Pwn/PwnTest/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/PwnTest",
-      "type": "StaticAttachment",
+      "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
-        "attachment archive exceeds RSCTF's per-file limit"
+        "portable single-service Docker runtime promoted from 'StaticAttachment' to DynamicContainer",
+        "generated per-team flag template 'INTECHFEST{pwntest_______________________________________________________[TEAM_HASH]}'",
+        "dynamic flag delivery proven through archived full flag literal",
+        "dynamic runtime compatibility rewrote 1 archived flag occurrence(s)"
       ],
-      "manifest": "Jeopardy/Pwn/pwntest/challenge.yaml"
+      "manifest": "Jeopardy/Pwn/pwntest-rsctf-dynamic/challenge.yaml"
     },
     {
       "name": "English or Spanish?",
       "category": "Pwn",
       "source": "Pwn/english_or_spanish/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/english_or_spanish",
-      "type": "StaticAttachment",
-      "warnings": [],
-      "manifest": "Jeopardy/Pwn/english-or-spanish/challenge.yaml"
+      "type": "DynamicContainer",
+      "runtimeReason": null,
+      "warnings": [
+        "portable single-service Docker runtime promoted from 'StaticAttachment' to DynamicContainer",
+        "generated per-team flag template 'INTECHFEST{english_or_spanish________________________[TEAM_HASH]}'",
+        "dynamic flag delivery proven through archived full flag literal",
+        "dynamic runtime compatibility rewrote 1 archived flag occurrence(s)"
+      ],
+      "manifest": "Jeopardy/Pwn/english-or-spanish-rsctf-dynamic/challenge.yaml"
     },
     {
       "name": "Pyjail Wannabe",
       "category": "Pwn",
       "source": "Pwn/pyjail_wannabe/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/pyjail_wannabe",
-      "type": "StaticAttachment",
-      "warnings": [],
-      "manifest": "Jeopardy/Pwn/pyjail-wannabe/challenge.yaml"
+      "type": "DynamicContainer",
+      "runtimeReason": null,
+      "warnings": [
+        "portable single-service Docker runtime promoted from 'StaticAttachment' to DynamicContainer",
+        "generated per-team flag template 'INTECHFEST{pyjail_wannabe________________________[TEAM_HASH]}'",
+        "dynamic flag delivery proven through archived full flag literal",
+        "dynamic runtime compatibility rewrote 1 archived flag occurrence(s)"
+      ],
+      "manifest": "Jeopardy/Pwn/pyjail-wannabe-rsctf-dynamic/challenge.yaml"
     },
     {
       "name": "Zeno Day",
@@ -228,9 +261,8 @@
       "source": "Pwn/zeno_day/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Pwn/zeno_day",
       "type": "DynamicContainer",
-      "warnings": [
-        "no literal flag could be recovered; organizer review required"
-      ],
+      "runtimeReason": null,
+      "warnings": [],
       "manifest": "Jeopardy/Pwn/zeno-day-rsctf-dynamic/challenge.yaml"
     },
     {
@@ -239,6 +271,7 @@
       "source": "Reverse/Box/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Box",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [
         "attachment omitted to stay below the repository size limit"
       ],
@@ -250,6 +283,7 @@
       "source": "Reverse/Branches/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Branches",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Reverse/branches/challenge.yaml"
     },
@@ -259,6 +293,7 @@
       "source": "Reverse/Serial/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Serial",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Reverse/serial/challenge.yaml"
     },
@@ -268,6 +303,7 @@
       "source": "Reverse/Standard/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Reverse/Standard",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Reverse/standard/challenge.yaml"
     },
@@ -277,6 +313,7 @@
       "source": "Web/Client Side Programming/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Client%20Side%20Programming",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [],
       "manifest": "Jeopardy/Web/client-side-programming/challenge.yaml"
     },
@@ -286,9 +323,8 @@
       "source": "Web/Imposible/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Imposible",
       "type": "DynamicContainer",
-      "warnings": [
-        "no literal flag could be recovered; organizer review required"
-      ],
+      "runtimeReason": null,
+      "warnings": [],
       "manifest": "Jeopardy/Web/imposible/challenge.yaml"
     },
     {
@@ -297,6 +333,7 @@
       "source": "Web/Notes Manager/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Notes%20Manager",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [
         "no player attachment files were present"
       ],
@@ -308,6 +345,7 @@
       "source": "Web/The Library/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/The%20Library",
       "type": "StaticAttachment",
+      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
       "warnings": [
         "attachment archive exceeds RSCTF's per-file limit"
       ],

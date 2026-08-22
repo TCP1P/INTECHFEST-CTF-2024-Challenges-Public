@@ -1,9 +1,0 @@
-services:
-  crc32plus:
-    build: .
-    container_name: crc32plus
-    ports:
-      - 5301:5000
-    restart: always
-    environment:
-      - RSCTF_FLAG=fake{flag}
