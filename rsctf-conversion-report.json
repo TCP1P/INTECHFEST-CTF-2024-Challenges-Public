@@ -117,10 +117,15 @@
       "category": "Misc",
       "source": "Misc/Previewer/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Misc/Previewer",
-      "type": "StaticAttachment",
-      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
-      "warnings": [],
-      "manifest": "Jeopardy/Misc/previewer/challenge.yaml"
+      "type": "DynamicContainer",
+      "runtimeReason": null,
+      "warnings": [
+        "portable single-service Docker runtime promoted from 'StaticAttachment' to DynamicContainer",
+        "generated per-team flag template 'INTECHFEST{previewer_____________________________________________________[TEAM_HASH]}'",
+        "dynamic flag delivery proven through archived full flag literal",
+        "dynamic runtime compatibility rewrote 1 archived flag occurrence(s)"
+      ],
+      "manifest": "Jeopardy/Misc/previewer-rsctf-dynamic/challenge.yaml"
     },
     {
       "name": "Sanity Check",
@@ -332,12 +337,15 @@
       "category": "Web",
       "source": "Web/Notes Manager/challenge.yml",
       "sourceUrl": "https://github.com/TCP1P/INTECHFEST-CTF-2024-Challenges-Public/tree/main/Web/Notes%20Manager",
-      "type": "StaticAttachment",
-      "runtimeReason": "Docker context exceeds the portable size/file limits or contains a symlink",
+      "type": "DynamicContainer",
+      "runtimeReason": null,
       "warnings": [
-        "no player attachment files were present"
+        "portable single-service Docker runtime promoted from 'StaticAttachment' to DynamicContainer",
+        "generated per-team flag template 'INTECHFEST{notes_manager[TEAM_HASH]}'",
+        "dynamic flag delivery uses the SQLite flag row adapter",
+        "dynamic runtime compatibility rewrote 0 archived flag occurrence(s)"
       ],
-      "manifest": "Jeopardy/Web/notes-manager/challenge.yaml"
+      "manifest": "Jeopardy/Web/notes-manager-rsctf-dynamic/challenge.yaml"
     },
     {
       "name": "Library",

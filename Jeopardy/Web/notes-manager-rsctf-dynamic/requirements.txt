@@ -1,0 +1,12 @@
+Flask==2.3.1
+Flask-Limiter==3.3.0
+Flask-SQLAlchemy==3.0.3
+SQLAlchemy==2.0.12
+mysqlclient==2.2.0
+mysql-connector-python==8.0.33
+sqlparse==0.4.3
+PyMySQL==1.1.0
+cryptography==36.0.2
+pycryptodome==3.11.0
+python-dateutil==2.8.2
+python-dotenv==1.0.0

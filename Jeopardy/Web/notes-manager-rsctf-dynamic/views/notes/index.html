@@ -1,0 +1,106 @@
+{% extends "template.html" %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item active">Notes</li>
+{% endblock %}
+
+{% block content %}
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Notes</h3>
+
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+        <i class="fas fa-minus"></i>
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <table id="notes" class="table table-sm table-striped table-bordered" style="width:100%">
+      <thead>
+        <tr>
+            <th class="align-middle">Title</th>
+            <th class="text-center align-middle" style="width: 50px;">Secured</th>
+            <th class="text-center align-middle" style="width: 50px;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for note in notes|sort(attribute='created_at') %}
+        <tr>
+          <td class="align-middle">{{ note.title }}</td>
+          <td class="text-center align-middle">
+            {% if note.password %}
+            <i class="fa-solid fa-lock"></i>
+            {% else %}
+            <i class="fa-solid fa-unlock"></i>
+            {% endif %}
+          </td>
+          <td class="text-center align-middle">
+            {% if note.password %}
+            <a href="#" class="btn btn-sm btn-outline-primary">
+              <i class="fa-solid fa-eye" onclick="viewSecuredNote('{{ note.id }}')"></i>
+            </a>
+            {% else %}
+            <a href="/notes/{{ note.id }}" class="btn btn-sm btn-outline-primary">
+              <i class="fa-solid fa-eye"></i>
+            </a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+  $(document).ready(function() {
+    $('#notes').DataTable({
+      ordering: false,
+      columnDefs: [
+        { orderable: false, searchable: false, targets: [1, 2] }
+      ],
+      "drawCallback": function( settings ) {
+        if (this.api().page.info().page != 0) {
+          window.history.replaceState(null, null, '?page=' + (parseInt(this.api().page.info().page) + 1));
+        } else {
+          window.history.replaceState(null, null, window.location.pathname);
+        }
+      },
+    });
+
+    const page = "{{ page|default(1) }}";
+    if (page) {
+      $('#notes').DataTable().page(parseInt(page) - 1).draw('page');
+    }
+  });
+
+  function viewSecuredNote(id) {
+    const password = prompt("Please enter the password of this note:", "");
+    if (password == null || password == "") {
+      return;
+    }
+
+    $.ajax({
+      url: '/notes/' + id + '/check-password',
+      type: 'POST',
+      data: {
+        password: password
+      },
+      success: function (response) {
+        if (response.success == true) {
+          window.location.href = '/notes/' + id;
+        } else {
+          alert(response.message);
+        }
+      },
+      error: function (response) {
+        alert(response.responseJSON.message);
+      }
+    });
+  }
+</script>
+{% endblock %}

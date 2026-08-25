@@ -1,0 +1,5 @@
+.vscode
+Dockerfile
+docker-compose.yml
+!rsctf-entrypoint.sh
+!rsctf-prepare-flag.sh
